@@ -143,7 +143,7 @@ window.addEventListener('DOMContentLoaded', async function () {
     }
 
     async function getData() {
-        const res = await fetch('../resources/data.json')
+        const res = await fetch('/resources/data.json')
         return await res.json()
     }
     //END filters
