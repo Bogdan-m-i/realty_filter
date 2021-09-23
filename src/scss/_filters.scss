@@ -1,0 +1,44 @@
+.filters {
+	margin-top: 80px;
+	margin-bottom: 32px;
+
+	&__group {
+		width: 100%;
+		&:not(:first-of-type) {
+			margin-left: 30px;
+		}
+	}
+
+	&__group-label {
+		font-size: 14px;
+		color: $dark-gray;
+		margin-bottom: 8px;
+	}
+
+	&__group-content {
+		label {
+			&:not(:last-of-type) {
+				margin-right: 8px;
+			}
+		}
+	}
+
+	&__line {
+		display: flex;
+		flex: 1;
+		margin-bottom: 20px;
+
+		&:last-of-type {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: space-between;
+	}
+}

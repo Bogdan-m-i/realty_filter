@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+@import './_var';
+@import './mixins/_screen';
+@import './grid';
+@import './mark';
+@import './form';
+@import './window';
+@import './filters';
+@import './result';
+@import './table';
+@import './card-apart';
+@import './callback';
+@import './empty';
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    background: #E5E5E5;
+
+    font-family: 'Rubik', sans-serif;
+    color: $black;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+
+.h1 {
+    font-size: 34px;
+}
+
+.h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}

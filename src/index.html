@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <form class="filters window">
+            <h1 class="filters__title h1">Квартиры в ЖК «Фрукты»</h1>
+            <div class="filters__line">
+
+                <div class="filters__group">
+                    <div class="filters__group-label">Количество комнат</div>
+                    <div class="filters__group-content">
+                        <label for="free-plan" class="myCheckbox">
+                            <input type="checkbox" name="type[]" value="Своб. план" id="free-plan">
+                            <span>Своб. план</span>
+                        </label>
+                        <label for="study" class="myCheckbox">
+                            <input type="checkbox" name="type[]" value="Студия" id="study">
+                            <span>Студия</span>
+                        </label>
+                        <label for="type_1" class="myCheckbox">
+                            <input type="checkbox" name="type[]" value="1-ком" id="type_1">
+                            <span>1</span>
+                        </label>
+                        <label for="type_2" class="myCheckbox">
+                            <input type="checkbox" name="type[]" value="2-ком" id="type_2">
+                            <span>2</span>
+                        </label>
+                        <label for="type_3" class="myCheckbox">
+                            <input type="checkbox" name="type[]" value="3-ком" id="type_3">
+                            <span>3</span>
+                        </label>
+                        <label for="type_4" class="myCheckbox">
+                            <input type="checkbox" name="type[]" value="4-ком" id="type_4">
+                            <span>4+</span>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="filters__line">
+
+                <div class="filters__group">
+                    <div class="input-filters">
+                        <div class="input-filters__label">Стоимость квартиры</div>
+                        <div class="input-filters__inputs">
+                            <input type="text" name="price_from" id="from" placeholder="0">
+                            <label for="from">От</label>
+                            <input type="text" name="price_to" id="to" placeholder="999 999 999">
+                            <label for="to">до</label>
+                            <div class="input-filters__unit">₽</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters__group">
+                    <div class="input-filters">
+                        <div class="input-filters__label">Общая площадь</div>
+                        <div class="input-filters__inputs">
+                            <input type="text" name="area_from" id="from" placeholder="35">
+                            <label for="from">От</label>
+                            <input type="text" name="area_to" id="to" placeholder="200">
+                            <label for="to">до</label>
+                            <div class="input-filters__unit">м²</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="filters__btns">
+                <button class="btn" type="reset">Сбросить</button>
+                <button class="btn btn_yellow" type="submit">Показать <span class="total_apart">10</span> квартир</button>
+            </div>
+        </form>
+
+        <div class="result window">
+            <div class="result__data">
+                <h2 class="result__title h2">Найдено <span class="total_apart">10</span> квартир</h2>
+                <div class="result__table table">
+
+                    <div class="table__title">
+                        <div class="table__th">Тип</div>
+                        <div class="table__th">Этаж</div>
+                        <div class="table__th">Срок сдачи</div>
+                        <div class="table__th">Площадь</div>
+                        <div class="table__th">Стоимость</div>
+                        <div class="table__th"></div>
+                    </div>
+
+                    <div class="table__data tabs">
+                        <div class="table__row open tab">
+                            <div class="table__line">
+                                <div class="table__td bold">Студия</div>
+                                <div class="table__td">10/25</div>
+                                <div class="table__td">1 кв. 2021</div>
+                                <div class="table__td">155 м²</div>
+                                <div class="table__td bold">22 356 000 ₽</div>
+                                <div class="table__td icons">
+                                    <span><img src="./img/heart.svg" alt=""></span>
+                                    <span class="tabToggle"><img src="./img/arrow_bottom.svg" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="table__content">
+        
+                                <div class="marks">
+                                    <span class="mark mark_green mark_info">Скидка 2%</span>
+                                    <span class="mark mark_orange mark_info">Материнский капитал</span>
+                                    <span class="mark mark_violet">Ипотека от 0,1 %</span>
+                                </div>
+                                <div class="card-apart">
+                                    <div class="card-apart__img">
+                                        <img src="./img/2k.png" alt="2—комнатная квартира">
+                                    </div>
+                                    <div class="card-apart__content">
+                                        <div class="card-apart__title">2—комнатная квартира</div>
+                                        <div class="card-apart__tags">
+                                            <div class="card-apart__tag">22 356 000 ₽</div>
+                                            <div class="card-apart__tag">155 м²</div>
+                                        </div>
+                                        <div class="card-apart__details">
+                                            <div class="card-apart__detail">
+                                                <div class="card-apart__deatail-title">Цена за м²</div>
+                                                <div class="card-apart__deatail-val">120 000 ₽</div>
+                                            </div>
+                                            <div class="card-apart__detail">
+                                                <div class="card-apart__deatail-title">Отделка</div>
+                                                <div class="card-apart__deatail-val">Без отделки</div>
+                                            </div>
+                                            <div class="card-apart__detail">
+                                                <div class="card-apart__deatail-title">Корпус</div>
+                                                <div class="card-apart__deatail-val">3</div>
+                                            </div>
+                                        </div>
+                                        <a class="card-apart__link" href="#">Подробное описание ></a>
+                                    </div>
+                                </div>
+                                <div class="callback">
+                                    <div class="callback__title">Хотите записаться на просмотр объекта?</div>
+                                    <div class="callback__desc">Оставьте свои данные, и мы организуем просмотр в удобное для вас время.</div>
+                                    <form class="callback__form">
+                                        <div class="callback__line">
+                                            <div class="input-group">
+                                                <label for="test">Имя</label>
+                                                <input type="text" class="myInput" placeholder="Введите имя" id="test">
+                                            </div>
+                                            <div class="input-group">
+                                                <label for="test">Номер телефона</label>
+                                                <input type="text" class="myInput" placeholder="+ 7" id="test">
+                                            </div>
+                                            <button class="btn btn_yellow" type="submit">Оставить заявку</button>
+                                        </div>
+                                        <div class="callback__polit">Оставляя заявку вы соглашаетесь с <a href="#">политикой конфидециальности</a></div>
+                                    </form>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="result__empty empty">
+                <div class="empty__img">
+                    <img src="./img/not_found.png" alt="">
+                </div>
+                <div class="empty__content">
+                    <div class="empty__title">Мы ничего похожего не нашли</div>
+                    <div class="empty__desc">Попробуйте задать другие условия поиска или сбросьте фильтр</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+<script src="./js/main.js"></script>
+
+</html>

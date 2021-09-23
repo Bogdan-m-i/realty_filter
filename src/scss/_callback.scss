@@ -1,0 +1,41 @@
+.callback {
+	&__desc {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+
+	&__form {}
+
+	&__line {
+		display: flex;
+		flex: 1;
+		align-items: flex-end;
+		margin-bottom: 12px;
+
+		>* {
+			&:not(:first-child) {
+				margin-left: 12px;
+			}
+		}
+
+		.btn {
+			padding-right: 0;
+			padding-left: 0;
+			width: 100%;
+		}
+	}
+
+	&__polit {
+		font-size: 14px;
+		color: $dark-gray;
+		
+		a {
+			color: $blue;
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+}

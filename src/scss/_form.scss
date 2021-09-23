@@ -1,0 +1,202 @@
+@mixin btn_yellow {
+	background: $yellow;
+	border: 1px solid $yellow;
+
+	&:hover {
+		background: $yellow-hover;
+		border: 1px solid $yellow-hover;
+	}
+
+	&:active {
+		background: $yellow-active;
+		border: 1px solid $yellow-active;
+	}
+}
+
+@mixin input-hover {
+	&:hover,
+	&.hover {
+		border: 1px solid $dark-gray;
+	}
+}
+
+@mixin ipnut-active {
+	&:focus,
+	&:active,
+	&.active {
+		outline: none;
+		border: 1px solid $blue;
+	}
+}
+
+@mixin input {
+	background: #FFFFFF;
+	border: 1px solid $med-gray;
+	box-sizing: border-box;
+	border-radius: $br;
+	padding: 12px 16px;
+	font-size: 16px;
+	color: $black;
+	&::placeholder {
+		color: $dark-gray;
+	}
+
+	&:not(:placeholder-shown) {
+		border: 1px solid $dark;
+	}
+
+	&:disabled {
+		background: $gray;
+		border: 1px solid $gray;
+		color: $dark2;
+		cursor: not-allowed;
+	}
+
+	@include input-hover;
+	@include ipnut-active;
+}
+
+.btn {
+	background: $gray;
+	border: none;
+	color: $black;
+	border-radius: $br;
+	padding: 14px 58px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+
+	&:hover {
+		background: $blue2;
+	}
+
+	&:active {
+		background: $blue3;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+
+.btn_yellow {
+	@include btn_yellow;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+
+	label {
+		font-size: 14px;
+		color: $dark-gray;
+		margin-bottom: 8px;
+	}
+}
+
+.myInput {
+	@include input;
+}
+
+.myCheckbox {
+	cursor: pointer;
+	position: relative;
+
+	input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+	}
+
+	span {
+		padding: 8px 16px;
+		border: 1px solid $med-gray;
+		border-radius: 40px;
+		display: inline-block;
+
+		&:hover {
+			border: 1px solid $black;
+		}
+	}
+
+	input:checked + span {
+		@include btn_yellow;
+	}
+
+	input:checked:disabled + span {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}
+
+.input-filters {
+	&__label {
+		font-size: 14px;
+		color: $dark-gray;
+		margin-bottom: 8px;
+	}
+
+	&__inputs {
+		display: flex;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 24px;
+			background: $med-gray;
+			top: calc(50% - 12px);
+			left: 50%;
+			z-index: 100;
+		}
+	}
+
+	&__unit {
+		position: absolute;
+		width: 1px;
+		height: 24px;
+		color: $dark-gray;
+		top: calc(50% - 12px);
+		right: calc(11px + 16px);
+		z-index: 100;
+	}
+
+	label {
+		position: absolute;
+		font-size: 16px;
+		line-height: 16px;
+		top: calc(50% - 8px);
+		left: 16px;
+		z-index: 100;
+		color: $dark-gray;
+
+		&:last-of-type {
+			left: calc(50% + 8px);
+		}
+	}
+
+	input {
+		@include input;
+		display: block;
+		width: 50%;
+
+		&::placeholder {
+			font-size: 16px;
+		}
+
+		&:first-of-type {
+			padding-left: 45px;
+			padding-right: 45px;
+			border-right: none;
+			border-radius: $br 0 0 $br;
+		}
+		&:last-of-type {
+			padding-left: 35px;
+			padding-right: 35px;
+			border-left: none;
+			border-radius: 0 $br $br 0;
+		}
+	}
+}

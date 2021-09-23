@@ -1,0 +1,65 @@
+.marks {
+	display: flex;
+
+	.mark {
+		display: block;
+		&:not(:first-of-type) {
+			margin-left: 8px;
+		}
+	}
+}
+
+.mark {
+	padding: 5px 10px;
+	font-size: 14px;
+	border-radius: 50px;
+	cursor: default;
+}
+
+.mark_info {
+	padding-right: 32px;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: '?';
+		top: calc(50% - 7px);
+		right: 10px;
+		width: 14px;
+		height: 14px;
+		border-radius: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+}
+
+.mark_orange {
+	color: #F2994A;
+	background: #FFF7F2;
+
+	&::before {
+		border: 1px solid #F2994A;
+	}
+}
+
+.mark_violet {
+	background: #E1E0FC;
+	color: #9796D0;
+
+	&::before {
+		border: 1px solid #9796D0;
+	}
+}
+
+.mark_green {
+	color: #56B77F;
+	background: #DDFFE2;
+
+	&::before {
+		border: 1px solid #56B77F;
+	}
+}
